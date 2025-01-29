@@ -1,8 +1,6 @@
-import React from "react";
-
 const TimelineComponent = () => {
   return (
-    <div className="p-5">
+    <div className="container mx-auto p-5">
       <h1 className="text-5xl font-bold text-center m-5">Career Experience</h1>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
@@ -30,10 +28,10 @@ const TimelineComponent = () => {
             nulla eos adipisci aspernatur aut, harum pariatur voluptate dicta
             corrupti quod.
           </div>
-          <hr />
+          <hr className="bg-accent" />
         </li>
         <li>
-          <hr />
+          <hr className="bg-accent" />
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +47,7 @@ const TimelineComponent = () => {
             </svg>
           </div>
           <div className="timeline-end md:mb-10">
-            <time className="font-mono italic">January 2022 - June 2024</time>
+            <time className="font-mono italic">January 2022 - July 2024</time>
             <div className="text-lg font-black">
               Manager - Data Integration Intermediate Analyst | Citibank N.A. -
               ROHQ

@@ -1,9 +1,7 @@
-import React from "react";
-
 const BodyComponent = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="hero bg-base-200 min-h-screen pb-5">
+      <div className="hero-content flex-col sm:text-center lg:text-left lg:flex-row-reverse">
         <img
           src="/images/Damien.jpg"
           className="max-w-sm rounded-lg shadow-2xl"
@@ -15,7 +13,7 @@ const BodyComponent = () => {
           <p className="py-6 font-extralight lg:text-left sm:text-center">
             Fullstack Web Developer | Cybersecurity Enthusiast
           </p>
-          <p className="py-6">
+          <p className="py-6 lg:text-left sm:text-justify">
             Welcome to my portfolio! I'm a passionate full-stack developer with
             a strong focus on creating seamless, dynamic web applications. With
             expertise in Next.js, React, Express.js, PostgreSQL, and Firebase, I

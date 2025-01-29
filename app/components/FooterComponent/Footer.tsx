@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
@@ -11,13 +10,13 @@ const FooterComponent = () => {
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a href="https://www.facebook.com/damien.magdangal/" target="__blank">
-          <FaFacebook size={24} />
+          <FaFacebook className="hover:text-gray-400" size={24} />
         </a>
         <a href="https://x.com/kuyaboooom" target="__blank">
-          <FaXTwitter size={24} />
+          <FaXTwitter className="hover:text-gray-400" size={24} />
         </a>
         <a href="https://www.instagram.com/damien.magdangal" target="__blank">
-          <FaInstagram size={24} />
+          <FaInstagram className="hover:text-gray-400" size={24} />
         </a>
       </nav>
     </footer>
