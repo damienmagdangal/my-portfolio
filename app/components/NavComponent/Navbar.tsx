@@ -30,48 +30,50 @@ const NavbarComponent = () => {
             className="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link href="" className="btn btn-neutral">
+              <Link href="/" className="btn btn-neutral">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="" className="btn btn-neutral">
+              <Link href="/about" className="btn btn-neutral">
                 About Me
               </Link>
             </li>
             <li>
-              <Link href="" className="btn btn-neutral">
+              <Link href="/projects" className="btn btn-neutral">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="" className="btn btn-neutral">
+              <Link href="/contact" className="btn btn-neutral">
                 Contact Me
               </Link>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">My Portfolio</a>
+        <Link href="/" className="btn btn-ghost text-xl">
+          My Portfolio
+        </Link>
       </div>
       <div className="navbar-center hidden md:block">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="" className="btn btn-neutral">
+            <Link href="/" className="btn btn-neutral">
               Home
             </Link>
           </li>
           <li>
-            <Link href="" className="btn btn-neutral">
+            <Link href="/about" className="btn btn-neutral">
               About Me
             </Link>
           </li>
           <li>
-            <Link href="" className="btn btn-neutral">
+            <Link href="/projects" className="btn btn-neutral">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="" className="btn btn-neutral">
+            <Link href="/contact" className="btn btn-neutral">
               Contact Me
             </Link>
           </li>

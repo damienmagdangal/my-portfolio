@@ -93,7 +93,10 @@ const ProjectComponent = () => {
         <div className="my-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-5">
           {projects.map((p, i) => {
             return (
-              <div className="card card-compact bg-base-100 w-96 shadow-xl">
+              <div
+                key={i}
+                className="card card-compact bg-base-100 w-96 shadow-xl"
+              >
                 <figure>
                   <img src={p.imgURL} alt={p.title} />
                 </figure>

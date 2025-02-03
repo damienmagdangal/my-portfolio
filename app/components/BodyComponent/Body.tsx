@@ -7,12 +7,14 @@ const BodyComponent = () => {
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold lg:text-left sm:text-center">
-            Damien Magdangal
-          </h1>
-          <p className="py-6 font-extralight lg:text-left sm:text-center">
-            Fullstack Web Developer | Cybersecurity Enthusiast
+          <p className="py-6 font-light lg:text-left sm:text-center">
+            LET'S MAKE YOUR BUSINESS KNOWN TO THE WORLD
           </p>
+          <h1 className="text-5xl font-semibold lg:text-left sm:text-center">
+            Hi, I'm <span className="text-primary font-extrabold">Damien</span>,
+            Fullstack Developer and Cybersecurity Enthusiast
+          </h1>
+
           <p className="py-6 lg:text-left sm:text-justify">
             Welcome to my portfolio! I'm a passionate full-stack developer with
             a strong focus on creating seamless, dynamic web applications. With
@@ -26,7 +28,7 @@ const BodyComponent = () => {
             connect if you're interested in collaborating or learning more about
             what I do!
           </p>
-          <button className="btn btn-primary">Download my Resume</button>
+          <button className="btn btn-primary">Get started</button>
         </div>
       </div>
     </div>

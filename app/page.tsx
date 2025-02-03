@@ -1,13 +1,13 @@
 import BodyComponent from "./components/BodyComponent/Body";
-import ProjectComponent from "./components/ProjectComponent/Project";
-import TimelineComponent from "./components/TimelineComponent/Timeline";
+import PricingComponent from "./components/PricingComponent/Pricing";
+import ServicesComponent from "./components/ServicesComponent/Services";
 
 export default function Home() {
   return (
     <main>
       <BodyComponent />
-      <TimelineComponent />
-      <ProjectComponent />
+      <ServicesComponent />
+      <PricingComponent />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 const TimelineComponent = () => {
   return (
     <div className="container mx-auto p-5">
-      <h1 className="text-5xl font-bold text-center m-5">Career Experience</h1>
+      <h1 className="text-5xl font-bold text-center m-5">Experience</h1>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
           <div className="timeline-middle">
@@ -9,7 +9,7 @@ const TimelineComponent = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="h-5 w-5 text-accent"
+              className="h-5 w-5 text-primary"
             >
               <path
                 fillRule="evenodd"
@@ -23,15 +23,17 @@ const TimelineComponent = () => {
             <div className="text-lg font-black">
               Assistant Vice President | Citibank N.A. - ROHQ
             </div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui
-            voluptatem quaerat officiis quae sapiente ea, animi repudiandae quo
-            nulla eos adipisci aspernatur aut, harum pariatur voluptate dicta
-            corrupti quod.
+            Manages all retail products for APAC and EMEA and performs
+            end-to-end implementation of new data acquisition or data warehouse
+            upgrade to ensure compliance with enterprise standards. Spearheads
+            the project for automated testing of new data to be ingested to the
+            global data warehouse where consumers pull the data for regulatory
+            reporting.
           </div>
-          <hr className="bg-accent" />
+          <hr className="bg-primary" />
         </li>
         <li>
-          <hr className="bg-accent" />
+          <hr className="bg-primary" />
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,15 +54,15 @@ const TimelineComponent = () => {
               Manager - Data Integration Intermediate Analyst | Citibank N.A. -
               ROHQ
             </div>
-            I developed automation for data acquisition testing using VBA and
-            SQL, reducing processing time from 1 hour to 2 minutes, while
-            managing change requests and resolving data quality issues as a
-            Subject Matter Expert for Retail Credit Cards. I conducted data
-            warehouse impact analysis, implemented data controls, and led
-            administrative activities including access management, office supply
-            procurement, and budget planning. Additionally, I created quarterly
-            senior management presentations and completed leadership training
-            through Citibank’s globally recognized programs.
+            Developed automation for data acquisition testing using VBA and SQL,
+            reducing processing time from 1 hour to 2 minutes, while managing
+            change requests and resolving data quality issues as a Subject
+            Matter Expert for Retail Credit Cards. I conducted data warehouse
+            impact analysis, implemented data controls, and led administrative
+            activities including access management, office supply procurement,
+            and budget planning. Additionally, I created quarterly senior
+            management presentations and completed leadership training through
+            Citibank’s globally recognized programs.
           </div>
           <hr />
         </li>

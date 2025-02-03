@@ -32,7 +32,7 @@ const ThemeButton = () => {
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Light"
-            value="light"
+            value="emerald"
           />
         </li>
         <li>
@@ -41,7 +41,7 @@ const ThemeButton = () => {
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Dark"
-            value="dark"
+            value="sunset"
           />
         </li>
         <li>
