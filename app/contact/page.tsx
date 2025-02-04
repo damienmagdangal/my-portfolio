@@ -41,7 +41,7 @@ const ContactPage = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-base-200">
-      <div className="card w-96 bg-base-100 shadow-xl p-6">
+      <div className="card w-96 bg-base-100 shadow-xl p-10">
         <h2 className="text-xl font-bold text-center">Contact Me</h2>
 
         {submitted ? (
@@ -70,16 +70,26 @@ const ContactPage = () => {
             />
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="I'd like to know more about your Standard plan..."
               className="textarea textarea-bordered w-full"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-neutral">
               Send Message
             </button>
             {error && <div className="alert alert-error mt-2">{error}</div>}
+            <div className="text-center">
+              <p>You can also contact me thru:</p>
+              <a
+                href="https://www.linkedin.com/in/jean-damien-magdangal-221a2a17b/"
+                target="__blank"
+                className="btn btn-ghost btn-circle"
+              >
+                <FaLinkedin className="hover:text-gray-400" size={24} />
+              </a>
+            </div>
           </form>
         )}
       </div>

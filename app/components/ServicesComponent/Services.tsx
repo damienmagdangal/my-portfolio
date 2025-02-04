@@ -11,10 +11,9 @@ const ServicesComponent = () => {
       title: "Custom Web Application Development",
       description: [
         "Tailor-made web applications built to meet your business needs.",
-        "Leveraging Full-stack solutions utilizing modern technologies (Next.js, React, Express.js, SQL/No-SQL Databases",
+        "Leveraging Full-stack solutions utilizing modern technologies (Next.js, React, Express.js, SQL/No-SQL Databases)",
       ],
-      imgURL:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imgURL: "/images/web.jpg",
     },
     {
       title: "E-commerce Website Development",
@@ -22,8 +21,7 @@ const ServicesComponent = () => {
         "Design and develop scalable online stores with secure payment integrations.",
         "Custom shopping carts, inventory management, and user-friendly interfaces using Shopify.",
       ],
-      imgURL:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imgURL: "/images/ecommerce.jpg",
     },
     {
       title: "Maintenance & Support",
@@ -31,8 +29,7 @@ const ServicesComponent = () => {
         "Ongoing maintenance and updates to ensure your web app stays secure and functional.",
         "Bug fixing, feature updates, and performance enhancements as your business evolves.",
       ],
-      imgURL:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imgURL: "/images/maintenance.jpg",
     },
     {
       title: "Cloud Hosting & Deployment",
@@ -40,19 +37,21 @@ const ServicesComponent = () => {
         "Set up cloud infrastructure and deploy web applications (AWS, Azure, Google Cloud).",
         "Continuous integration/continuous deployment (CI/CD) for efficient code management.",
       ],
-      imgURL:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imgURL: "/images/cloud.jpg",
     },
   ];
 
   return (
-    <div className="py-10 mb-10">
+    <div className="bg-base-200 py-10 mb-10">
       <h1 className="font-bold text-center text-5xl m-5">Services Offered</h1>
       <div className="flex mx-auto justify-center items-center">
         <div className="my-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-5">
           {services.map((s, i) => {
             return (
-              <div className="card bg-base-100 w-96 shadow-xl hover:scale-110 transition-all duration-500">
+              <div
+                key={i}
+                className="card bg-base-100 w-96 shadow-xl hover:scale-110 transition-all duration-500"
+              >
                 <figure className="px-10 pt-10">
                   <img src={s.imgURL} alt={s.title} className="rounded-xl" />
                 </figure>

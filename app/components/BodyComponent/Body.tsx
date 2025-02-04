@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const BodyComponent = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen pb-5">
+    <div className="hero min-h-screen pb-5">
       <div className="hero-content flex-col sm:text-center lg:text-left lg:flex-row-reverse">
         <img
           src="/images/Damien.jpg"
@@ -30,7 +30,7 @@ const BodyComponent = () => {
             connect if you're interested in collaborating or learning more about
             what I do!
           </p>
-          <Link href="/contact" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-neutral">
             Get started
           </Link>
         </div>
