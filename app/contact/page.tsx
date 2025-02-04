@@ -35,6 +35,7 @@ const ContactPage = () => {
         setError(data.error || "Something went wrong.");
       }
     } catch (err) {
+      console.log(err);
       setError("Failed to send message.");
     }
   };

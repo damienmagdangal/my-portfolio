@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Project {
   title: string;
   description: string;
@@ -98,14 +100,23 @@ const ProjectComponent = () => {
                 className="card card-compact bg-base-100 w-96 shadow-xl"
               >
                 <figure>
-                  <img src={p.imgURL} alt={p.title} />
+                  <Image
+                    src={p.imgURL}
+                    alt={p.title}
+                    width={800}
+                    height={400}
+                  />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{p.title}</h2>
                   <p>{p.description}</p>
                   <div className="card-actions justify-start">
-                    {p.techUsed.map(({ t, c }) => {
-                      return <div className={c}>{t}</div>;
+                    {p.techUsed.map(({ t, c }, i) => {
+                      return (
+                        <div key={i} className={c}>
+                          {t}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>

@@ -1,13 +1,5 @@
 import Link from "next/link";
 
-interface Pricing {
-  tier: string;
-  price: string;
-  details: Array<string>;
-  color: string;
-  scale: string;
-}
-
 const PricingComponent = () => {
   return (
     <main className="py-10 my-20">

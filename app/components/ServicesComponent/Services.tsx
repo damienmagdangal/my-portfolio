@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Service {
   title: string;
   description: Array<string>;
@@ -53,7 +55,13 @@ const ServicesComponent = () => {
                 className="card bg-base-100 w-96 shadow-xl hover:scale-110 transition-all duration-500"
               >
                 <figure className="px-10 pt-10">
-                  <img src={s.imgURL} alt={s.title} className="rounded-xl" />
+                  <Image
+                    src={s.imgURL}
+                    alt={s.title}
+                    className="rounded-xl"
+                    width={400}
+                    height={800}
+                  />
                 </figure>
                 <div className="card-body items-center text-center">
                   <h2 className="card-title">{s.title}</h2>
