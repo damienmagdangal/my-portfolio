@@ -1,6 +1,6 @@
 const TimelineComponent = () => {
   return (
-    <div className="container mx-auto p-5 mb-5">
+    <div className="container mx-auto p-5 mb-10">
       <h1 className="text-5xl font-bold text-center m-5">Experience</h1>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
