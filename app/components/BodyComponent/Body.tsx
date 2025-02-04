@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BodyComponent = () => {
   return (
     <div className="hero bg-base-200 min-h-screen pb-5">
@@ -28,7 +30,9 @@ const BodyComponent = () => {
             connect if you're interested in collaborating or learning more about
             what I do!
           </p>
-          <button className="btn btn-primary">Get started</button>
+          <Link href="/contact" className="btn btn-primary">
+            Get started
+          </Link>
         </div>
       </div>
     </div>

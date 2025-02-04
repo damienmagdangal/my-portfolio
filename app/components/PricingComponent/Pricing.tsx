@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Pricing {
   tier: string;
   price: string;
@@ -57,7 +59,9 @@ const PricingComponent = () => {
                 </li>
               </ul>
               <div className="card-actions justify-center">
-                <button className="btn">Get Started</button>
+                <Link href="/contact" className="btn btn-primary">
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>
@@ -84,13 +88,15 @@ const PricingComponent = () => {
                 </li>
               </ul>
               <div className="card-actions justify-center">
-                <button className="btn">Get Started</button>
+                <Link href="/contact" className="btn btn-primary">
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>
           {/*Card end*/}
           {/*Card start*/}
-          <div className="card bg-base-200 text-accent-content w-96 hover:scale-110 hover:bg-accent transition-all duration-300 shadow-2xl mb-5">
+          <div className="card bg-base-200 text-accent-content w-96 hover:scale-110 hover:bg-accent transition-all duration-300 shadow-2xl mb-5 ">
             {/*Card body*/}
             <div className="card-body">
               <h2 className="card-title text-lg">Professional Plan</h2>
@@ -111,7 +117,9 @@ const PricingComponent = () => {
                 </li>
               </ul>
               <div className="card-actions justify-center">
-                <button className="btn">Get Started</button>
+                <Link href="/contact" className="btn btn-primary">
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>

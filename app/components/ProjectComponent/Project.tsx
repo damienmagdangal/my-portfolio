@@ -87,7 +87,7 @@ const ProjectComponent = () => {
   ];
 
   return (
-    <div className="bg-base-200 py-10">
+    <div className=" py-10">
       <h1 className="text-5xl font-bold text-center">Projects</h1>
       <div className="mx-auto flex justify-center items-center">
         <div className="my-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-5">
