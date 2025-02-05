@@ -16,25 +16,25 @@ const RatingComponent = (props: Proficiency) => {
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
       </div>
@@ -57,19 +57,19 @@ const RatingComponent = (props: Proficiency) => {
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
       </div>
@@ -98,13 +98,13 @@ const RatingComponent = (props: Proficiency) => {
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
       </div>
@@ -139,7 +139,7 @@ const RatingComponent = (props: Proficiency) => {
         <input
           type="radio"
           name="rating-2"
-          className="mask mask-star-2 bg-orange-200"
+          className="mask mask-star-2 bg-orange-100"
           disabled
         />
       </div>

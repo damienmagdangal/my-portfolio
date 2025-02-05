@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Damien Magdangal",
   description: "Damien Magdangdal's web portfolio",
+  icons: {
+    icon: { url: "/icon.webp", type: "image/webp" },
+  },
 };
 
 export default function RootLayout({
