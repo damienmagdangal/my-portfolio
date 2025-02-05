@@ -8,8 +8,8 @@ const BodyComponent = () => {
         <Image
           src="/images/Damien.jpg"
           className="max-w-sm rounded-lg shadow-2xl"
-          width={400}
-          height={700}
+          width={300}
+          height={600}
           alt="Picture of Damien Magdangal"
         />
         <div>
