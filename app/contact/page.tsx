@@ -10,6 +10,7 @@ const ContactPage = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   // Specify event type as React.ChangeEvent for input and textarea fields
@@ -22,6 +23,7 @@ const ContactPage = () => {
   // Specify event type as React.FormEvent for form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     setError(""); // Reset error message
 
     try {
@@ -35,11 +37,14 @@ const ContactPage = () => {
       if (res.ok) {
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000);
+        setLoading(false);
       } else {
         setError(data.error || "Something went wrong.");
+        setLoading(false);
       }
     } catch (err) {
       console.log(err);
+      setLoading(false);
       setError("Failed to send message.");
     }
   };
@@ -51,7 +56,23 @@ const ContactPage = () => {
 
         {submitted ? (
           <div className="alert alert-success mt-4 text-center text-success-content">
-            Message sent successfully!
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 shrink-0 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>
+              Thank you for your message! I&apos;ll be responding with your
+              query shortly!
+            </span>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
@@ -82,8 +103,13 @@ const ContactPage = () => {
               required
             ></textarea>
             <button type="submit" className="btn btn-neutral">
-              Send Message
+              {!loading ? (
+                "Send Message"
+              ) : (
+                <span className="loading loading-spinner loading-md items-center justify-center text-center"></span>
+              )}
             </button>
+
             {error && <div className="alert alert-error mt-2">{error}</div>}
             <div className="text-center">
               <p>You can also contact me thru:</p>

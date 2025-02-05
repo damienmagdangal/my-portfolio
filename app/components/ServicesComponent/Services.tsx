@@ -52,7 +52,7 @@ const ServicesComponent = () => {
             return (
               <div
                 key={i}
-                className="card bg-base-100 w-96 shadow-xl hover:scale-110 transition-all duration-500"
+                className="card bg-base-100 w-96 shadow-xl lg:hover:scale-110 transition-all duration-500"
               >
                 <figure className="px-10 pt-10">
                   <Image

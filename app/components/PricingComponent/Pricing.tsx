@@ -7,7 +7,7 @@ const PricingComponent = () => {
       <div className="flex mx-auto p-6 items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
           {/*Card start*/}
-          <div className="card bg-gradient-to-b from-white to-primary text-primary-content w-96 hover:scale-110  transition-all duration-300 shadow-2xl mb-5">
+          <div className="card bg-gradient-to-b from-white to-primary text-primary-content w-96 lg:hover:scale-110  transition-all duration-300 shadow-2xl mb-5">
             {/*Card body*/}
             <div className="card-body">
               <h2 className="card-title text-lg">Basic Plan</h2>
@@ -84,7 +84,7 @@ const PricingComponent = () => {
           </div>
           {/*Card end*/}
           {/*Card start*/}
-          <div className="card bg-gradient-to-b from-white to-secondary text-primary-content  w-96 hover:scale-110 hover:bg-secondary transition-all duration-300 shadow-2xl mb-5">
+          <div className="card bg-gradient-to-b from-white to-secondary text-primary-content  w-96 lg:hover:scale-110 hover:bg-secondary transition-all duration-300 shadow-2xl mb-5">
             {/*Card body*/}
             <div className="card-body">
               <h2 className="card-title text-lg">Standard Plan</h2>
@@ -174,7 +174,7 @@ const PricingComponent = () => {
           </div>
           {/*Card end*/}
           {/*Card start*/}
-          <div className="card bg-gradient-to-b from-white to-accent text-accent-content w-96 hover:scale-110 hover:bg-accent transition-all duration-300 shadow-2xl mb-5 ">
+          <div className="card bg-gradient-to-b from-white to-accent text-accent-content w-96 lg:hover:scale-110 hover:bg-accent transition-all duration-300 shadow-2xl mb-5 ">
             {/*Card body*/}
             <div className="card-body">
               <h2 className="card-title text-lg">Professional Plan</h2>
