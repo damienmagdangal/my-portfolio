@@ -9,7 +9,29 @@ interface Project {
 }
 
 const ProjectComponent = () => {
-  const projects: Project[] = [
+  const highlights: Project[] = [
+    {
+      title: "Simon Game",
+      description: "Simple game using HTML, CSS, JavaScript and JQuery",
+      link: "https://damienmagdangal.github.io/simon-game/",
+      imgURL: "/images/simon-game.png",
+      techUsed: [
+        {
+          t: "HTML",
+          c: "badge badge-info text-white",
+        },
+        {
+          t: "CSS",
+          c: "badge badge-primary text-white",
+        },
+        {
+          t: "JavaScript",
+          c: "badge badge-warning text-white",
+        },
+      ],
+    },
+  ];
+  const oldProjects: Project[] = [
     {
       title: "Cooperative Web and Mobile Application | 2020 | Team of 2",
       description:
@@ -90,10 +112,49 @@ const ProjectComponent = () => {
 
   return (
     <div className=" py-10 mb-10">
-      <h1 className="text-5xl font-bold text-center">Projects</h1>
+      <h1 className="text-5xl font-bold text-center mb-5">Projects</h1>
+      <div className="text-center text-3xl font-bold mb-5">Hobby Projects</div>
+      <div className="mx-auto flex justify-center items-center">
+        <div className="my-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-5"></div>
+        {highlights.map((p, i) => {
+          return (
+            <div
+              key={i}
+              className="card card-compact bg-base-100 w-96 shadow-xl"
+            >
+              <a href={p.link} target="__blank">
+                <figure>
+                  <Image
+                    src={p.imgURL}
+                    alt={p.title}
+                    width={800}
+                    height={400}
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">{p.title}</h2>
+                  <p>{p.description}</p>
+                  <div className="card-actions justify-start">
+                    {p.techUsed.map(({ t, c }, i) => {
+                      return (
+                        <div key={i} className={c}>
+                          {t}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+      <div className="text-center text-3xl font-bold my-5">
+        Freelance Projects
+      </div>
       <div className="mx-auto flex justify-center items-center">
         <div className="my-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-5">
-          {projects.map((p, i) => {
+          {oldProjects.map((p, i) => {
             return (
               <div
                 key={i}
