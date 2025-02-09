@@ -11,7 +11,6 @@ const PricingComponent = () => {
             {/*Card body*/}
             <div className="card-body">
               <h2 className="card-title text-lg">Basic Plan</h2>
-              <div className="divider"></div>
               <h2 className=" font-bold text-5xl text-center py-10">$25/hr</h2>
               <div className="divider"></div>
               <ul>
