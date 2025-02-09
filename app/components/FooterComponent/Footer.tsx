@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa6";
 
 const FooterComponent = () => {
   return (
-    <footer className="footer bg-neutral text-neutral-content items-center p-4 bottom-0 fixed">
+    <footer className="footer bg-neutral text-neutral-content items-center p-4">
       <aside className="grid-flow-col items-center">
         <p>Copyright © 2025 - All right reserved</p>
       </aside>
