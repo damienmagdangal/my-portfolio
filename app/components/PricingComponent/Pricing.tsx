@@ -4,8 +4,8 @@ const PricingComponent = () => {
   return (
     <main className="py-10 my-20">
       <h1 className="text-4xl text-center mb-8 font-bold">Pricing</h1>
-      <div className="flex mx-auto p-6 items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+      <div className="flex mx-auto items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/*Card start*/}
           <div className="card bg-gradient-to-b from-blue-300 to-purple-600  text-secondary-content w-96 lg:hover:scale-110  transition-all duration-300 shadow-2xl mb-5">
             {/*Card body*/}
