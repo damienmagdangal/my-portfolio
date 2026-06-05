@@ -3,21 +3,159 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-border: #e5e5e5;
+  --color-text-primary: #171717;
+  --color-text-muted: #6b7280;
+  --color-accent: #30d6f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #111111;
+  --color-border: #222222;
+  --color-text-primary: #e5e5e5;
+  --color-text-muted: #6b7280;
+  --color-accent: #30d6f0;
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  /* color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif; */
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
 
-  overflow-x: hidden;
+.prose-post h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.prose-post h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.prose-post h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+}
+
+.prose-post p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.prose-post ul,
+.prose-post ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.prose-post ul {
+  list-style-type: disc;
+}
+
+.prose-post ol {
+  list-style-type: decimal;
+}
+
+.prose-post li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.prose-post li > ul,
+.prose-post li > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-post blockquote {
+  margin-bottom: 1rem;
+  border-left: 2px solid var(--color-border);
+  padding-left: 1rem;
+  color: var(--color-text-muted);
+}
+
+.prose-post hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.prose-post strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.prose-post em {
+  font-style: italic;
+}
+
+.prose-post a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.prose-post code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875em;
+}
+
+.prose-post :not(pre) > code {
+  border-radius: 0.25rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.125rem 0.375rem;
+  color: var(--color-text-primary);
+}
+
+.prose-post pre {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border);
+}
+
+.prose-post pre code {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.prose-post figure[data-rehype-pretty-code-figure] {
+  margin-bottom: 1rem;
+}
+
+.prose-post img {
+  margin: 1.5rem 0;
+  max-width: 100%;
+  border: 1px solid var(--color-border);
 }

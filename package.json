@@ -11,11 +11,19 @@
   "dependencies": {
     "firebase": "^11.2.0",
     "firebase-admin": "^13.0.2",
+    "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "rehype-pretty-code": "^0.14.3",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
+    "shiki": "^4.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

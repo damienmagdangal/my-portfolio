@@ -1,22 +1,27 @@
 import type { Config } from "tailwindcss";
-import daisyui from "daisyui";
 
 export default {
+  darkMode: "class",
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./data/**/*.ts",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--color-background)",
+        surface: "var(--color-surface)",
+        border: "var(--color-border)",
+        "text-primary": "var(--color-text-primary)",
+        "text-muted": "var(--color-text-muted)",
+        accent: "var(--color-accent)",
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
     },
   },
-  plugins: [daisyui],
-  daisyui: {
-    themes: ["emerald", "sunset", "cyberpunk", "retro"],
-  },
+  plugins: [],
 } satisfies Config;

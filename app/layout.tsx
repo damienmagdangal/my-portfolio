@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavbarComponent from "./components/NavComponent/Navbar";
-import FooterComponent from "./components/FooterComponent/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,11 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Damien Magdangal",
-  description: "Damien Magdangdal's web portfolio",
-  icons: {
-    icon: { url: "/icon.webp", type: "image/webp" },
-  },
+  title: "zchown | Cybersecurity Portfolio",
+  description: "Web penetration tester and offensive security researcher.",
 };
 
 export default function RootLayout({
@@ -28,13 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="cmyk">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",t!=="light")}catch(e){document.documentElement.classList.add("dark")}})();`,
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <NavbarComponent />
+        <Navbar />
         {children}
-        <FooterComponent />
+        <Footer />
       </body>
     </html>
   );
