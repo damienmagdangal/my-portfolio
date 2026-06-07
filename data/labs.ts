@@ -34,6 +34,18 @@ export type DevProject = {
 
 export const htbMachines: HtbMachine[] = [
   {
+    name: "DevHub",
+    difficulty: "Medium",
+    os: "Linux",
+    techniques: [
+      "MCP RCE",
+      "Pivoting",
+      "Laterel Movement via Jupyter Rest APIs",
+      "Privilege Escalation on hidden endpoint",
+    ],
+    writeupSlug: "htb-reactor",
+  },
+  {
     name: "Reactor",
     difficulty: "Medium",
     os: "Linux",
