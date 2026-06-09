@@ -34,6 +34,17 @@ export type DevProject = {
 
 export const htbMachines: HtbMachine[] = [
   {
+    name: "Connected",
+    difficulty: "Easy",
+    os: "Linux",
+    techniques: [
+      "CVE-2025-57819 - FreePBX RCE",
+      "privilege escalation via writable files",
+      "incron abuse",
+    ],
+    writeupSlug: "htb-connected",
+  },
+  {
     name: "DevHub",
     difficulty: "Medium",
     os: "Linux",
