@@ -8,8 +8,22 @@ export type Cert = {
 
 export const certifications: Cert[] = [
   {
+    name: "Certified Purple Team Fundamentals",
+    issuer: "CyberWarfare Labs",
+    date: "June 2026",
+    status: "completed",
+    credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/6a3a5aecbfb48daa5ad17665",
+  },
+  {
+    name: "Certified Blue Team Fundamentals",
+    issuer: "CyberWarfare Labs",
+    date: "June 2026",
+    status: "completed",
+    credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/6a3907aac062f334ce457e5e",
+  },
+  {
     name: "Certified Multi-Cloud Red Team Analyst (MCRTA)",
-    issuer: "CyberWarfareLabs",
+    issuer: "CyberWarfare Labs",
     date: "April 2026",
     status: "completed",
     credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/69db685cf365a7369821da2b",
@@ -24,21 +38,21 @@ export const certifications: Cert[] = [
   },
   {
     name: "Certified Red Team Analyst (CRTA)",
-    issuer: "CyberWarfareLabs",
+    issuer: "CyberWarfare Labs",
     date: "March 2026",
     status: "completed",
     credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/69a4148e9359f169cf5d8537",
   },
   {
     name: "Certified Web Red Team Analyst (WEB-RTA)",
-    issuer: "CyberWarfareLabs",
+    issuer: "CyberWarfare Labs",
     date: "February 2026",
     status: "completed",
     credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/6984352d398414f740f27e69",
   },
   {
     name: "Certified Cybersecurity Analyst (C3SA)",
-    issuer: "CyberWarfareLabs",
+    issuer: "CyberWarfare Labs",
     date: "January 2026",
     status: "completed",
     credentialUrl: "https://labs.cyberwarfare.live/credential/achievement/697ac8d0fbb79ac75856af37",
