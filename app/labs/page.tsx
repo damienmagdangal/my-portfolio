@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BugBountyCard from "@/components/BugBountyCard";
 import DevProjectCard from "@/components/DevProjectCard";
 import LabCard from "@/components/LabCard";
 import SecurityProjectCard from "@/components/SecurityProjectCard";
@@ -13,16 +14,6 @@ export const metadata: Metadata = {
   title: "Labs | zchown",
   description:
     "HackTheBox machines, security projects, bug bounty findings, and development background.",
-};
-
-const severityStyles: Record<
-  (typeof bugBountyFindings)[number]["severity"],
-  string
-> = {
-  Critical: "border-red-600 text-red-600",
-  High: "border-red-500 text-red-500",
-  Medium: "border-amber-500 text-amber-500",
-  Low: "border-yellow-500 text-yellow-500",
 };
 
 export default function LabsPage() {
@@ -60,40 +51,7 @@ export default function LabsPage() {
           </p>
           <div className="space-y-4">
             {bugBountyFindings.map((finding) => (
-              <article
-                key={finding.category}
-                className="border border-border bg-surface p-5"
-              >
-                <div className="flex flex-wrap items-start gap-3">
-                  <code
-                    className={`shrink-0 rounded border px-2 py-0.5 font-mono text-xs ${severityStyles[finding.severity]}`}
-                  >
-                    {finding.severity}
-                  </code>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-sm text-text-primary">
-                      {finding.category}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-text-muted">
-                      {finding.detail}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-text-muted">
-                      <span>Platform: {finding.platform}</span>
-                      <span>Status: {finding.status}</span>
-                      {finding.reportLink && (
-                        <a
-                          href={finding.reportLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:underline"
-                        >
-                          Report →
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </article>
+              <BugBountyCard key={finding.category} finding={finding} />
             ))}
           </div>
           <p className="mt-4 text-xs text-text-muted">

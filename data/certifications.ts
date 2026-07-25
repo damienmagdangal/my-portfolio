@@ -93,7 +93,7 @@ export const certifications: Cert[] = [
     credentialUrl: "https://www.credly.com/badges/d04decc8-9fb2-4332-9140-97b059e6cd12/public_url",
   },
   {
-    name: "HTB Certified Penetration Tester Specialist (CPTS)",
+    name: "HTB Certified Web Exploitation Specialist (CWES)",
     issuer: "HackTheBox",
     date: "—",
     status: "in-progress",

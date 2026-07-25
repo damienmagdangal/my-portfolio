@@ -1,12 +1,13 @@
 import Link from "next/link";
 import SkillBadge from "@/components/SkillBadge";
+import StatusPill from "@/components/StatusPill";
 import type { HtbMachine } from "@/data/labs";
 
-const difficultyStyles: Record<HtbMachine["difficulty"], string> = {
-  Easy: "border-accent text-accent",
-  Medium: "border-amber-500 text-amber-500",
-  Hard: "border-red-500 text-red-500",
-  Insane: "border-purple-500 text-purple-500",
+const difficultyTone: Record<HtbMachine["difficulty"], "accent" | "warning" | "danger" | "neutral"> = {
+  Easy: "accent",
+  Medium: "warning",
+  Hard: "danger",
+  Insane: "neutral",
 };
 
 type LabCardProps = {
@@ -15,16 +16,14 @@ type LabCardProps = {
 
 export default function LabCard({ machine }: LabCardProps) {
   return (
-    <article className="border border-border bg-surface p-5">
+    <article className="border border-border bg-surface p-5 transition-colors hover:border-border-hover">
       <div className="flex flex-wrap items-center gap-2">
         <h3 className="font-mono text-sm font-bold text-text-primary">
           {machine.name}
         </h3>
-        <code
-          className={`rounded border px-2 py-0.5 font-mono text-xs ${difficultyStyles[machine.difficulty]}`}
-        >
+        <StatusPill as="code" tone={difficultyTone[machine.difficulty]}>
           {machine.difficulty}
-        </code>
+        </StatusPill>
         <span className="font-mono text-xs text-text-muted">{machine.os}</span>
       </div>
 

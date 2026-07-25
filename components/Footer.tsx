@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border py-6">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-4 text-sm text-text-muted sm:flex-row sm:justify-center sm:gap-4">
-        <span>© 2025 Damien Magdangal · @zchown</span>
+        <span>© {new Date().getFullYear()} Damien Magdangal · @zchown</span>
         <div className="flex items-center gap-4">
           <a
             href="https://github.com/damienmagdangal"

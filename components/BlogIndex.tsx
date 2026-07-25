@@ -33,7 +33,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
           className={`rounded border px-3 py-1 font-mono text-xs transition-colors ${
             activeTag === null
               ? "border-accent text-accent"
-              : "border-border text-text-muted hover:border-[#333] hover:text-text-primary"
+              : "border-border text-text-muted hover:border-border-hover hover:text-text-primary"
           }`}
         >
           all
@@ -46,7 +46,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
             className={`rounded border px-3 py-1 font-mono text-xs transition-colors ${
               activeTag === tag
                 ? "border-accent text-accent"
-                : "border-border text-text-muted hover:border-[#333] hover:text-text-primary"
+                : "border-border text-text-muted hover:border-border-hover hover:text-text-primary"
             }`}
           >
             {tag}

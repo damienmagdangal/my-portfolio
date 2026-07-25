@@ -1,4 +1,5 @@
 import type { Cert } from "@/data/certifications";
+import StatusPill from "@/components/StatusPill";
 
 type CertCardProps = {
   cert: Cert;
@@ -8,20 +9,14 @@ export default function CertCard({ cert }: CertCardProps) {
   const isCompleted = cert.status === "completed";
 
   return (
-    <div className="border border-border bg-surface p-5">
+    <article className="border border-border bg-surface p-5 transition-colors hover:border-border-hover">
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-mono text-sm font-bold leading-snug text-text-primary">
           {cert.name}
         </h3>
-        <span
-          className={`shrink-0 rounded px-2 py-0.5 font-mono text-xs ${
-            isCompleted
-              ? "border border-accent text-accent"
-              : "border border-amber-500 text-amber-500"
-          }`}
-        >
+        <StatusPill tone={isCompleted ? "accent" : "warning"} className="shrink-0">
           {isCompleted ? "Completed" : "In Progress"}
-        </span>
+        </StatusPill>
       </div>
       <p className="mt-2 text-sm text-text-muted">{cert.issuer}</p>
       <p className="mt-1 text-sm text-text-muted">{cert.date}</p>
@@ -35,6 +30,6 @@ export default function CertCard({ cert }: CertCardProps) {
           ↗ Verify
         </a>
       )}
-    </div>
+    </article>
   );
 }

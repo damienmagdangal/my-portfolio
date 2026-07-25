@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import StatusPill from "@/components/StatusPill";
 import { getAllPosts, getPostBySlug } from "@/lib/mdx";
 import { getReadingTime } from "@/lib/readingTime";
 
@@ -73,12 +74,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <span>·</span>
                 <div className="flex flex-wrap gap-2">
                   {meta.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded border border-accent px-2 py-0.5 font-mono text-xs text-accent"
-                    >
+                    <StatusPill key={tag} tone="accent">
                       {tag}
-                    </span>
+                    </StatusPill>
                   ))}
                 </div>
               </>

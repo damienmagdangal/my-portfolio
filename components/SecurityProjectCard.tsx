@@ -8,7 +8,7 @@ export default function SecurityProjectCard({
   project,
 }: SecurityProjectCardProps) {
   return (
-    <article className="border border-border bg-surface p-5">
+    <article className="border border-border bg-surface p-5 transition-colors hover:border-border-hover">
       <div className="flex flex-wrap items-center gap-2">
         <h3 className="font-mono text-sm font-bold text-text-primary">
           {project.name}

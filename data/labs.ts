@@ -51,22 +51,19 @@ export const htbMachines: HtbMachine[] = [
     techniques: [
       "MCP RCE",
       "Pivoting",
-      "Laterel Movement via Jupyter Rest APIs",
+      "Lateral Movement via Jupyter Rest APIs",
       "Privilege Escalation on hidden endpoint",
     ],
-    writeupSlug: "htb-reactor",
   },
   {
     name: "Reactor",
     difficulty: "Medium",
     os: "Linux",
     techniques: [
-      "CVE-[REDACTED]",
       "React Flight RCE",
       "Node.js debugger privesc",
       "SSH port forwarding",
     ],
-    writeupSlug: "htb-reactor",
   },
   {
     name: "Pterodactyl",
@@ -106,7 +103,7 @@ export const htbMachines: HtbMachine[] = [
     techniques: [
       "mass assignment",
       "path traversal",
-      "gftobins exploit",
+      "GTFOBins exploit",
     ],
   },
   {

@@ -35,7 +35,6 @@ const skillGroups = [
       "Gobuster",
       "John the Ripper",
       "Hashcat",
-      "",
       "Metasploit",
       "Arjun",
       "Kiterunner",

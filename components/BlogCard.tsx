@@ -15,13 +15,13 @@ function formatDate(date: string): string {
 
 export default function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="border border-border p-5 transition-colors hover:border-[#333]">
-      <Link
-        href={`/blog/${post.slug}`}
-        className="font-mono text-sm leading-snug text-text-primary hover:text-accent"
-      >
+    <Link
+      href={`/blog/${post.slug}`}
+      className="block border border-border bg-surface p-5 transition-colors hover:border-border-hover"
+    >
+      <h3 className="font-mono text-sm leading-snug text-text-primary">
         {post.title}
-      </Link>
+      </h3>
       <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-text-muted">
         <span>{formatDate(post.date)}</span>
         {post.tags.length > 0 && (
@@ -39,6 +39,6 @@ export default function BlogCard({ post }: BlogCardProps) {
       <p className="mt-3 text-sm leading-relaxed text-text-muted">
         {post.description}
       </p>
-    </article>
+    </Link>
   );
 }

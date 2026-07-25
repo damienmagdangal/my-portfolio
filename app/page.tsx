@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlogCard from "@/components/BlogCard";
 import { getAllPosts } from "@/lib/mdx";
 
 const socialLinks = [
@@ -52,19 +53,11 @@ const socialLinks = [
 const credentials = ["CRTA", "MCRTA", "WEB-RTA", "C3SA", "ISC2 CC"];
 
 const currentlyStats = [
-  { label: "Pursuing", value: "HTB CPTS" },
+  { label: "Pursuing", value: "HTB CWES" },
   { label: "Latest Certification", value: "MCRTA — April 2026" },
   { label: "Active On", value: "HackTheBox & CyberWarfare Labs" },
   { label: "Bug Bounty", value: "Active (Freelance)" },
 ];
-
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -171,28 +164,7 @@ export default async function Home() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {latestPosts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="border border-border bg-surface p-5 transition-colors hover:border-accent"
-              >
-                <h3 className="font-mono text-sm leading-snug text-text-primary">
-                  {post.title}
-                </h3>
-                <p className="mt-2 text-xs text-text-muted">
-                  {formatDate(post.date)}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-mono text-xs text-accent"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
+              <BlogCard key={post.slug} post={post} />
             ))}
           </div>
         </section>

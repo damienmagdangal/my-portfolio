@@ -13,6 +13,7 @@ export default {
         background: "var(--color-background)",
         surface: "var(--color-surface)",
         border: "var(--color-border)",
+        "border-hover": "var(--color-border-hover)",
         "text-primary": "var(--color-text-primary)",
         "text-muted": "var(--color-text-muted)",
         accent: "var(--color-accent)",
